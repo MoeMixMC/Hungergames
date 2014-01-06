@@ -27,7 +27,7 @@ public class TimerTask implements Runnable {
 		remainingtime = (remainingtime - 30);
 
 		if (remainingtime == 30 && HG.plugin.getConfig().getBoolean("settings.teleport-at-end")) {
-			game.msgAll("&l&cThe game is almost over, fight to the death!");
+			game.msgAll("&7[&1HungerGames&7]&c&lThe game is almost over, fight to the death!");
 			game.respawnAll();
 		} else if (this.remainingtime < 10) {
 			stop();
