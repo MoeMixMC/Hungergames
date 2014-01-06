@@ -222,7 +222,7 @@ public class GameListener implements Listener {
 			Status st = plugin.players.get(p.getName()).getGame().getStatus();
 			if (st == Status.WAITING || st == Status.COUNTDOWN) {
 				event.setCancelled(true);
-				p.sendMessage(ChatColor.RED + "You cannot interact until the game has started!");
+				p.sendMessage(ChatColor.RED + "You cannot do anything untill the game has started");
 			}
 		}
 	}
@@ -243,7 +243,7 @@ public class GameListener implements Listener {
 						if (p.getItemInHand().getType() == Material.AIR) {
 							game.join(p);
 						} else {
-							Util.msg(p, ChatColor.RED + "Click the sign with your hand!");
+							Util.msg(p, ChatColor.RED + "Click the sign with an empty hand!");
 						}
 					}
 				} 
@@ -269,7 +269,7 @@ public class GameListener implements Listener {
 				
 				if (g.getStatus() == Status.RUNNING || g.getStatus() == Status.BEGINNING) {
 					if (!Config.blocks.contains(b.getType().getId())) {
-						p.sendMessage(ChatColor.RED + "You cannot edit this block type!");
+						p.sendMessage(ChatColor.RED + "You cannot break this block!");
 						event.setCancelled(true);
 						return;
 					} else {
