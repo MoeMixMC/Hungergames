@@ -299,6 +299,7 @@ public class Game {
 		p.setHealth(20);
 		p.setFoodLevel(20);
 		p.setFireTicks(0);
+		p.sendMessage(ChatColor.DARK_GREEN + "May the odds be ever in your favor")
 	}
 
 	public void freeze(Player p) {
