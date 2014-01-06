@@ -206,8 +206,8 @@ public class Game {
 	public void kitHelp(Player p) {
 		String kit = HG.plugin.kit.getKitList();
 		Util.scm(p, "&8     ");
-		Util.scm(p, "&9&l>----------[&b&lWelcome to HungerGames&9&l]----------<");
-		Util.scm(p, "&9&l - &bPick a kit using &c/hg kit <kit-name>");
+		Util.scm(p, "&9&l>----------[&b&lHungergames by &4&lMoeMix &b&land &6&lYMM&9&l]----------<");
+		Util.scm(p, "&9&l - &bBought a kit? Do &c/hg kit <kit-name>");
 		Util.scm(p, "&9&lKits:&b" + kit);
 		Util.scm(p, "&9&l>------------------------------------------<");
 	}
@@ -304,7 +304,7 @@ public class Game {
 	public void freeze(Player p) {
 		p.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 23423525, -10));
 		p.setWalkSpeed(0.0001F);
-		p.setFoodLevel(1);
+		p.setFoodLevel(20);
 		p.setAllowFlight(false);
 		p.setFlying(false);
 		p.setGameMode(GameMode.SURVIVAL);
