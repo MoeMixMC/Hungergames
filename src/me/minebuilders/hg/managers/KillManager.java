@@ -11,12 +11,12 @@ public class KillManager {
 		case ENTITY_EXPLOSION: return (name + " Was blown to bits!");
 		case BLOCK_EXPLOSION: return (name + " Was blown to bits!");
 		case CUSTOM: return (name + " Was killed by an unknown cause!");
-		case FALL: return (name + " Hit the ground too hard!");
+		case FALL: return (name + " Broke their legs!");
 		case FALLING_BLOCK: return (name + " Was smashed by a block!");
 		case FIRE: return (name + " Was Burned alive!");
 		case FIRE_TICK: return (name + " Was Burned alive!");
-		case PROJECTILE: return (name + " Got hit by a projectile!");
-		case LAVA: return (name + " Fell into a pit of lava!");
+		case PROJECTILE: return (name + " Got hit by a mysterious flying object!");
+		case LAVA: return (name + " took a dip in a pit of lava!");
 		case MAGIC: return (name + " Was destroyed by magic!");
 		case SUICIDE: return (name + " Couldn't handle hungergames!");
 		default: return (name + " Was killed by " + dc.toString().toLowerCase());
