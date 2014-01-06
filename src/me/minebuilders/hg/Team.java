@@ -19,7 +19,7 @@ public class Team {
 	
 	public void invite(Player p) {
 		Util.scm(p, "&6*&b&m                                                                             &6*");
-		Util.scm(p, "| &f" + leader + " &3Just invited you to a &fTeam&3!");
+		Util.scm(p, "| &b" + leader + " wants you to join his &4Team&3!");
 		Util.scm(p, "| &3Type &f/hg team accept &3To join!");
 		Util.scm(p, "&6*&b&m                                                                             &6*");
 		pending.add(p.getName());
