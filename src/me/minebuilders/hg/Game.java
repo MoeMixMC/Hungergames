@@ -299,13 +299,12 @@ public class Game {
 		p.setHealth(20);
 		p.setFoodLevel(20);
 		p.setFireTicks(0);
-		p.sendMessage(ChatColor.DARK_GREEN + "May the odds be ever in your favor");
 	}
 
 	public void freeze(Player p) {
 		p.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 23423525, -10));
 		p.setWalkSpeed(0.0001F);
-		p.setFoodLevel(20);
+		p.setFoodLevel(1);
 		p.setAllowFlight(false);
 		p.setFlying(false);
 		p.setGameMode(GameMode.SURVIVAL);
