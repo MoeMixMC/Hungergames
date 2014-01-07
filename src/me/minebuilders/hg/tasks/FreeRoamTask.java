@@ -29,7 +29,7 @@ public class FreeRoamTask implements Runnable {
 
 	@Override
 	public void run() {
-		game.msgAll("&c&lFree-Roam is over, PVP is now enabled!");
+		game.msgAll("&c&lFree-Roam is over! May the odds be ever in your favor...");
 		game.startGame();
 	}
 
