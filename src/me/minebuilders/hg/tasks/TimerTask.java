@@ -9,7 +9,7 @@ import me.minebuilders.hg.Status;
 
 public class TimerTask implements Runnable {
 
-	private int remainingtime;
+	public int remainingtime;
 	private int id;
 	private Game game;
 
