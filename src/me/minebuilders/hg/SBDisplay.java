@@ -32,7 +32,7 @@ public class SBDisplay {
 		this.ob.setDisplaySlot(DisplaySlot.SIDEBAR);
 		this.ob.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "HungerGames");
 		this.g = g;
-		TimerTask.remainingtime = r
+		TimerTask.remainingtime = r;
 	}
 
 	public void setAlive() {
