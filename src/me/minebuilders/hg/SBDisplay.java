@@ -23,7 +23,7 @@ public class SBDisplay {
 	private HashMap<String, Scoreboard> score = new HashMap<String, Scoreboard>();
 	private Game g;
 	private Objective timeob;
-	private TimerTaks tt;
+	private TimerTask tt;
 
 	public SBDisplay(Game g) {
 		this.manager = Bukkit.getScoreboardManager();
