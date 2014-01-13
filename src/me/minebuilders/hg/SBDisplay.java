@@ -33,14 +33,14 @@ public class SBDisplay {
 		this.ob.setDisplaySlot(DisplaySlot.SIDEBAR);
 		this.ob.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "HungerGames");
 		this.g = g;
-		this.tt = ttt;
+		this.tt = t;
 	}
 
 	public void setAlive() {
                 Score score = ob.getScore(Bukkit.getOfflinePlayer(ChatColor.GREEN + "Players-Alive:")); 
                 Score timescore = timeob.getScore(Bukkit.getOfflinePlayer(ChatColor.GREEN + "Time:"));
                 score.setScore(g.getPlayers().size());
-                timescore.setScore(ttt.roamtime);
+                timescore.setScore(t.remainingtime);
 	}
 
 	public void resetAlive() {
