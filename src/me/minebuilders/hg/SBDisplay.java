@@ -23,6 +23,7 @@ public class SBDisplay {
 	private HashMap<String, Scoreboard> score = new HashMap<String, Scoreboard>();
 	private Game g;
 	private Objective timeob;
+	private TimerTaks tt;
 
 	public SBDisplay(Game g) {
 		this.manager = Bukkit.getScoreboardManager();
@@ -32,14 +33,14 @@ public class SBDisplay {
 		this.ob.setDisplaySlot(DisplaySlot.SIDEBAR);
 		this.ob.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "HungerGames");
 		this.g = g;
-		TimerTask.remainingtime = r;
+		this.tt = ttt;
 	}
 
 	public void setAlive() {
                 Score score = ob.getScore(Bukkit.getOfflinePlayer(ChatColor.GREEN + "Players-Alive:")); 
                 Score timescore = timeob.getScore(Bukkit.getOfflinePlayer(ChatColor.GREEN + "Time:"));
                 score.setScore(g.getPlayers().size());
-                timescore.setScore(r);
+                timescore.setScore(ttt.roamtime);
 	}
 
 	public void resetAlive() {
