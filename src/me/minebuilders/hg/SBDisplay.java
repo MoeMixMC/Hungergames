@@ -23,6 +23,7 @@ public class SBDisplay {
 		this.manager = Bukkit.getScoreboardManager();
 		this.board = manager.getNewScoreboard();
 		this.ob = board.registerNewObjective(ChatColor.GREEN + "Players-Alive:", "dummy");
+                this.timeob = board.registerNewObjective(ChatColor.GREEN + "Time:", "time");
 		this.ob.setDisplaySlot(DisplaySlot.SIDEBAR);
 		this.ob.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "HungerGames");
 		this.g = g;
@@ -37,6 +38,7 @@ public class SBDisplay {
 
 	public void resetAlive() {
 		board.resetScores(Bukkit.getOfflinePlayer(ChatColor.GREEN + "Players-Alive:"));
+		board.resetScores(Bukkit.getOfflinePlayer(ChatColor.GREEN + "Time:");
 		score.clear();
 	}
 
