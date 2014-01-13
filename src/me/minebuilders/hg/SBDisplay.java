@@ -29,8 +29,10 @@ public class SBDisplay {
 	}
 
 	public void setAlive() {
-		Score score = ob.getScore(Bukkit.getOfflinePlayer(ChatColor.GREEN + "Players-Alive:")); 
-		score.setScore(g.getPlayers().size());
+                Score score = ob.getScore(Bukkit.getOfflinePlayer(ChatColor.GREEN + "Players-Alive:")); 
+                Score timescore = timeob.getScore(Bukkit.getOfflinePlayer(ChatColor.GREEN + "Time:"));
+                score.setScore(g.getPlayers().size());
+                timescore.setScore(g.remainingtime);
 	}
 
 	public void resetAlive() {
