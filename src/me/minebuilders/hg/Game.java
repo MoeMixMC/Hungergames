@@ -209,7 +209,7 @@ public class Game {
 		Util.scm(p, "&9&l>----------[&b&lHungergames by &4&lMoeMix &b&land &6&lYMM&9&l]----------<");
 		Util.scm(p, "&9&l - &bBought a kit? Do &c/hg kit <kit-name>");
 		Util.scm(p, "&9&lKits:&b" + kit);
-		Util.scm(p, "&9&l>------------------------------------------<");
+		Util.scm(p, "&9&l>----------[Design by &6Darklight]----------<");
 	}
 
 	public void respawnAll() {
