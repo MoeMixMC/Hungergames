@@ -217,6 +217,7 @@ public class Game {
 			Player p = Bukkit.getPlayer(st);
 			if (p != null)
 				p.teleport(pickSpawn());
+				p.getWorld().playEffect(p.getLocation(), Effect.MOBSPAWNER_FLAMES, 10)
 		}
 	}
 
