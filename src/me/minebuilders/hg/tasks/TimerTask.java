@@ -1,3 +1,4 @@
+
 package me.minebuilders.hg.tasks;
 
 import org.bukkit.Bukkit;
@@ -9,25 +10,25 @@ import me.minebuilders.hg.Status;
 
 public class TimerTask implements Runnable {
 
-	public int remainingtime;
+	private int remainingtime;
 	private int id;
 	private Game game;
 
 	public TimerTask(Game g, int time) {
 		this.remainingtime = time;
 		this.game = g;
-		
+
 		this.id = Bukkit.getScheduler().scheduleSyncRepeatingTask(HG.plugin, this, 30 * 20L, 30 * 20L);
 	}
-	
+
 	@Override
 	public void run() {
 		if (game == null || game.getStatus() != Status.RUNNING) stop(); //A quick null check!
-		
+
 		remainingtime = (remainingtime - 30);
 
 		if (remainingtime == 30 && HG.plugin.getConfig().getBoolean("settings.teleport-at-end")) {
-			game.msgAll("&7[&1HungerGames&7]&c&lThe game is almost over, fight to the death!");
+			game.msgAll("&l&cThe game is almost over, fight to the death!");
 			game.respawnAll();
 		} else if (this.remainingtime < 10) {
 			stop();
@@ -39,7 +40,7 @@ public class TimerTask implements Runnable {
 			else game.msgAll(ChatColor.GREEN+"The game is ending in " + this.remainingtime +" seconds!");
 		}
 	}
-	
+
 	public void stop() {
 		Bukkit.getScheduler().cancelTask(id);
 	}
