@@ -1,11 +1,7 @@
 package me.minebuilders.hg;
 
 import java.util.HashMap;
-import me.minebuilders.hg.mobhandler.Spawner;
-import me.minebuilders.hg.tasks.ChestDropTask;
-import me.minebuilders.hg.tasks.FreeRoamTask;
-import me.minebuilders.hg.tasks.StartingTask;
-import me.minebuilders.hg.tasks.TimerTask;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -22,30 +18,23 @@ public class SBDisplay {
 	private Objective ob;
 	private HashMap<String, Scoreboard> score = new HashMap<String, Scoreboard>();
 	private Game g;
-	private Objective timeob;
-	private TimerTask tt;
 
 	public SBDisplay(Game g) {
 		this.manager = Bukkit.getScoreboardManager();
 		this.board = manager.getNewScoreboard();
 		this.ob = board.registerNewObjective(ChatColor.GREEN + "Players-Alive:", "dummy");
-                this.timeob = board.registerNewObjective(ChatColor.GREEN + "Time:", "time");
 		this.ob.setDisplaySlot(DisplaySlot.SIDEBAR);
 		this.ob.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "HungerGames");
 		this.g = g;
-		this.tt = t;
 	}
 
 	public void setAlive() {
-                Score score = ob.getScore(Bukkit.getOfflinePlayer(ChatColor.GREEN + "Players-Alive:")); 
-                Score timescore = timeob.getScore(Bukkit.getOfflinePlayer(ChatColor.GREEN + "Time:"));
-                score.setScore(g.getPlayers().size());
-                timescore.setScore(t.remainingtime);
+		Score score = ob.getScore(Bukkit.getOfflinePlayer(ChatColor.GREEN + "Players-Alive:")); 
+		score.setScore(g.getPlayers().size());
 	}
 
 	public void resetAlive() {
 		board.resetScores(Bukkit.getOfflinePlayer(ChatColor.GREEN + "Players-Alive:"));
-		board.resetScores(Bukkit.getOfflinePlayer(ChatColor.GREEN + "Time:"));
 		score.clear();
 	}
 
