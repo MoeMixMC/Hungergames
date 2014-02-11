@@ -300,6 +300,14 @@ public class Game {
 		p.setHealth(20);
 		p.setFoodLevel(20);
 		p.setFireTicks(0);
+		ItemStack axe = new ItemStack(Material.WOOD_AXE);
+		ItemMeta axeim = axe.getItemMeta();
+		axeim.setDisplayName(ChatColor.AQUA+"Starter");
+		List<String> axelore = new ArrayList<String>();
+		axelore.add(ChatColor.GREEN+"Not Finding anything in Chests? Use this!");
+		axeim.setLore(axelore);
+		axe.setItemMeta(axeim);
+		p.getInventory().addItem(axe);
 	}
 
 	public void freeze(Player p) {
