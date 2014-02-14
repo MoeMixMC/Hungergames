@@ -257,6 +257,7 @@ public class GameListener implements Listener {
 	
 	@EventHandler
 	public void onPlayersLeftSignClick(PlayerInteractEvent e){
+		Game game = HG.manager.getGame(sign.getLine(1));
 		Player p = e.getPlayer();
 		if(e.getAction().equals(Action.RIGHT_CLCK_BLOCK){
 			Block b = e.getClickedBlock();
@@ -264,7 +265,6 @@ public class GameListener implements Listener {
 				Sign sign = (Sign) b.getState();
 				// SETTING THE VISIBLE SIGN
 				if(sign.getLine(0).equals(game){
-					Game game = HG.manager.getGame(sign.getLine(1));
 					if(p.isOP()){
 					sign.setLine(0, ChatColor.AQUA+"["+ChatColor.GREEN+"Players Left"+ChatColor.AQUA+"]")
 					sign.setLine(1, ChatColor.GOLD+game);
