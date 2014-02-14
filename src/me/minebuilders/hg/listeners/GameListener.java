@@ -263,12 +263,23 @@ public class GameListener implements Listener {
 			if(b.getType().equals(Material.WALL_SIGN){
 				Sign sign = (Sign) b.getState();
 				// SETTING THE VISIBLE SIGN
-				if(sign.getLine(0).equals("hgarena1"){
+				if(sign.getLine(0).equals(game){
 					Game game = HG.manager.getGame(sign.getLine(1));
 					if(p.isOP()){
 					sign.setLine(0, ChatColor.AQUA+"["+ChatColor.GREEN+"Players Left"+ChatColor.AQUA+"]")
 					sign.setLine(1, ChatColor.GOLD+game);
 					sign.setLine(3, ChatColor.RED+"(Right Cick)");
+					}
+				}
+				if(sign.getLine(1).equals(game)){
+					for(String players : Game.getPlayers().getName()){
+					Inventory gui = Bukkit.createInventory(null, 27, ChatColor.DARK_RED+"Players Left in " + ChatColor.GREEN+game);
+					ItemStack playerhead = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
+					SkullMeta meta = (SkullMeta)playerhead.getItemMeta();
+					meta.setOwner(players.getName());
+					meta.setDisplayName(players.getName());
+					playerhead.setItemMeta(meta);
+					gui.addItem(playerhead);
 					}
 				}
 			}
