@@ -265,14 +265,11 @@ public class GameListener implements Listener {
 				// SETTING THE VISIBLE SIGN
 				if(sign.getLine(0).equals("hgarena1"){
 					Game game = HG.manager.getGame(sign.getLine(1));
-					if(p.isOP(){
+					if(p.isOP()){
 					sign.setLine(0, ChatColor.AQUA+"["+ChatColor.GREEN+"Players Left"+ChatColor.AQUA+"]")
 					sign.setLine(1, ChatColor.GOLD+game);
 					sign.setLine(3, ChatColor.RED+"(Right Cick)");
 					}
-				}
-				if(sign.getLine(1).equals(game){
-					
 				}
 			}
 		}
