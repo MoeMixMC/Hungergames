@@ -25,6 +25,7 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.Effect;
+import org.bukkit.inventory.ItemStack;
 
 public class Game {
 
