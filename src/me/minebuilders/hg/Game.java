@@ -23,6 +23,8 @@ import org.bukkit.block.Sign;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.Effect;
 
 public class Game {
 
@@ -217,7 +219,6 @@ public class Game {
 			Player p = Bukkit.getPlayer(st);
 			if (p != null)
 				p.teleport(pickSpawn());
-				p.getWorld().playEffect(p.getLocation(), Effect.MOBSPAWNER_FLAMES, 10);
 		}
 	}
 
@@ -299,7 +300,6 @@ public class Game {
 		}
 		p.setHealth(20);
 		p.setFoodLevel(20);
-		p.setFireTicks(0);
 		ItemStack axe = new ItemStack(Material.WOOD_AXE);
 		ItemMeta axeim = axe.getItemMeta();
 		axeim.setDisplayName(ChatColor.AQUA+"Starter");
