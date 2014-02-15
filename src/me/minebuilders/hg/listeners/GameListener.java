@@ -257,23 +257,21 @@ public class GameListener implements Listener {
 	
 	@EventHandler
 	public void onPlayersLeftSignClick(PlayerInteractEvent e){
-		Game game = HG.manager.getGame(sign.getLine(1));
+		Game game = HG.manager.getGame(sign.getLine(1).substring(2));
 		Player p = e.getPlayer();
-		if(e.getAction().equals(Action.RIGHT_CLCK_BLOCK)){
+		if(e.getAction().equals(Action.RIGHT_CLICK_BLOCK)){
 			Block b = e.getClickedBlock();
 			if(b.getType().equals(Material.WALL_SIGN)){
 				Sign sign = (Sign) b.getState();
 				// SETTING THE VISIBLE SIGN
 				if(sign.getLine(0).equals(game)){
-					if(p.isOP()){
 					sign.setLine(0, ChatColor.AQUA+"["+ChatColor.GREEN+"Players Left"+ChatColor.AQUA+"]");
-					sign.setLine(1, ChatColor.GOLD+game);
+					sign.setLine(1, ChatColor.GOLD+""+game);
 					sign.setLine(3, ChatColor.RED+"(Right Cick)");
-					}
 				}
 				if(sign.getLine(1).equals(game)){
 					for(String players : Game.getPlayers().getName()){
-					Inventory gui = Bukkit.createInventory(null, 27, ChatColor.DARK_RED+"Players Left in " + ChatColor.GREEN+game);
+					Inventory gui = Bukkit.createInventory(null, 27, ChatColor.DARK_RED+"Players Left in " + ChatColor.GREEN+""+game);
 					ItemStack playerhead = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
 					SkullMeta meta = (SkullMeta)playerhead.getItemMeta();
 					meta.setOwner(players.getName());
