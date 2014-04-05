@@ -209,10 +209,10 @@ public class Game {
 	public void kitHelp(Player p) {
 		String kit = HG.plugin.kit.getKitList();
 		Util.scm(p, "&8     ");
-		Util.scm(p, "&9&l>----------[&b&lHungergames by &4&lMoeMix &b&land &6&lYMM&9&l]----------<");
+		Util.scm(p, "&9&l>----------[&b&lWelcome To &4&lHungerGames!]----------<");
 		Util.scm(p, "&9&l - &bBought a kit? Do &c/hg kit <kit-name>");
 		Util.scm(p, "&9&lKits:&b" + kit);
-		Util.scm(p, "&9&l>----------[Design by &6Darklight]----------<");
+		Util.scm(p, "&9&l>----------[&b&lGood Luck!]----------<");
 	}
 
 	public void respawnAll() {
