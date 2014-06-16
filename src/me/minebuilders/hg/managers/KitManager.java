@@ -17,7 +17,7 @@ public class KitManager {
 			Util.scm(p, ChatColor.RED + path + " Doesn't exist!");
 			Util.scm(p, "&9&lKits:&b" + getKitList());
 		} else if (!kititems.get(path).hasKitPermission(p))
-			Util.msg(p, ChatColor.RED + "You don't have permission to use this kit!");
+			Util.msg(p, ChatColor.RED + "You must donate to use this kit!");
 		else {
 			kititems.get(path).setInventoryContent(p);
 		}
