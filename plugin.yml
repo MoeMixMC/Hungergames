@@ -1,9 +1,9 @@
 name: HungerGames
-author: bob7l
-description: A Simple, fun, HungerGames plugin
-version: 3.0
+author: MoeMix
+description: moe custom hg
+version: 0.3.1
 main: me.minebuilders.hg.HG
 softdepend: [Multiverse-Core, MultiWorld, Vault, My Worlds]
 commands:
   hg:
-    description: HungerGames Base command
+    description: self explanitory
