@@ -309,6 +309,7 @@ public class Game {
 		axeim.setLore(axelore);
 		axe.setItemMeta(axeim);
 		p.getInventory().addItem(axe);
+		p.updateInventory();
 	}
 
 	public void freeze(Player p) {
